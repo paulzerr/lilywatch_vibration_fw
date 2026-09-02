@@ -1,0 +1,19 @@
+idf_component_register(
+  SRCS
+    "main.cpp"
+    "board.cpp"
+    "power.cpp"
+    "haptic.cpp"
+    "battery_log.cpp"
+    "ble.cpp"
+    "protocol.cpp"
+  INCLUDE_DIRS "."
+  PRIV_REQUIRES
+    bt
+    driver
+    esp_pm
+    esp_system
+    esp_timer
+    nvs_flash
+    spi_flash
+)

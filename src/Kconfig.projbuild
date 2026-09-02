@@ -1,0 +1,13 @@
+menu "Lily Watch v5"
+
+    config LILY_POWER_DIAGNOSTICS
+        bool "Expose compact PM sleep diagnostics over BLE"
+        depends on PM_ENABLE
+        select PM_PROFILING
+        default n
+        help
+            Enables a read-only BLE diagnostic packet backed by ESP-IDF PM
+            profiling. Keep this disabled for production/default
+            builds unless sleep-residency evidence is being collected.
+
+endmenu
